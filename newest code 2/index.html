@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html>
+  <title>Myhealth</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="shortcut icon" type="image/x-icon" href="images/logosmall.png" />
+  <link rel="stylesheet" href="css/styles.css?v=2330" />
+  <link rel="stylesheet" href="css/home.css?v=2330" />
+  <link rel="stylesheet" href="css/calender.css" />
+  <link rel="stylesheet" href="css/modal.css" />
+  <link rel="stylesheet" href="css/glide.core.css" />
+  <link rel="stylesheet" href="css/anim.css" />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css"
+    type="text/css"
+  />
+  <script src="js/glide.js"></script>
+  <script src="js/scripts.js?v=2330"></script>
+  <script src="js/calender.js"></script>
+  <script src="js/mask.js"></script>
+
+  <body>
+    <div id="mini-modal" class="modal">
+      <div class="modal-window">
+        <h3 class="modal-title"></h3>
+        <p class="modal-message"></p>
+        <div align="center">
+          <button class="btn-close" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+    <div class="header">
+      <a href="index.html"
+        ><img class="img-logo" alt="Logo" src="images/icons/LOGO.png"
+      /></a>
+      <label class="show-menu-btn">
+        <i class="fa fa-ellipsis-h" onclick="toggleDrawerMenu();"></i>
+      </label>
+
+      <ul id="menu" class="menu">
+        <a href="index.html">Home</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+        <a href="#">FeedBack</a>
+        <a href="javascript:loadPage('login')">Appointment</a>
+        <label class="hide-menu-btn">
+          <i class="fa fa-times" onclick="toggleDrawerMenu();"></i>
+        </label>
+      </ul>
+    </div>
+    <div id="main" class="main">
+      <div id="wrapper-main">
+        <!-- Banner -->
+        <section id="banner">
+          <div class="image filtered" data-position="center">
+            <img src="images/pic01.jpg" alt="" />
+          </div>
+          <div class="content">
+            <div class="text-content">
+              <div class="t-text">
+                <span>We're</span><span>not</span> <span>like</span>
+                <span>other</span> <span>online</span> <span>therapy</span>
+                <span>site</span>
+              </div>
+            </div>
+            <p data-animation="zoomReverseIn">
+              It's not just chat. It's a complete toolbox.
+            </p>
+            <p data-animation="zoomReverseIn">
+              You get all the support and tools you need to be happier.
+            </p>
+
+            <ul class="actions special" data-animation="zoomReverseIn">
+              <li>
+                <a
+                  href="javascript:loadPage('login');"
+                  class="button wide scrolly btn-t2"
+                  >Get Started</a
+                >
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- Section -->
+        <section id="first" class="main special">
+          <h2>How it works</h2>
+          <br />
+
+          <div class="row cf">
+            <div class="four col">
+              <div class="card" data-animation="slideInUp">
+                <i class="fas fa-user-friends"></i>
+                <h6>Create a private username</h6>
+              </div>
+            </div>
+            <div class="four col">
+              <div class="card" data-animation="slideInDown">
+                <i class="fas fa-clipboard-list"></i>
+                <h6>Answer a few questions about yourself</h6>
+              </div>
+            </div>
+            <div class="four col">
+              <div class="card" data-animation="slideInLeft">
+                <i class="fas fa-hand-holding-usd"></i>
+                <h6>Enter payment information.</h6>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Spotlight -->
+        <section class="main spotlight">
+          <div class="row cf">
+            <div class="four col">
+              <div
+                class="image filtered"
+                data-position="center"
+                data-animation="slideInUp"
+              >
+                <img class="spotlight-img" src="images/talk.jpg" alt="" />
+              </div>
+            </div>
+            <div class="eight col spotlight-box bg1">
+              <div
+                class="content spotlight-content"
+                data-animation="zoomReverseIn"
+              >
+                <h2>How well do you know yourself?</h2>
+                <p>Discover our free psychological self-tests</p>
+                <ul class="actions">
+                  <li>
+                    <a href="#one" class="button spotlight-btn btn-t">More</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="row cf">
+            <div class="eight col spotlight-box bg2">
+              <div class="content spotlight-content" data-animation="slideInUp">
+                <h2>Would you like to try the chat?</h2>
+                <p>All day everyday, we are here for you</p>
+                <ul class="actions">
+                  <li>
+                    <a href="#one" class="button spotlight-btn btn-t">More</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="four col">
+              <div
+                class="image filtered"
+                data-position="center"
+                data-animation="zoomReverseIn"
+              >
+                <img class="spotlight-img" src="images/test.jpg" alt="" />
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Section -->
+        <section class="main special2 special">
+          <h2>Why should I choose Online Therapy?</h2>
+          <br />
+          <div class="row cf">
+            <div class="twelve col">
+              <div class="glide">
+                <div data-glide-el="track" class="glide__track">
+                  <ul class="glide__slides">
+                    <li class="glide__slide">
+                      <article>
+                        <a href="#" class="image filtered">
+                          <img src="images/1.jpg" alt="" />
+                        </a>
+                        <div class="content">
+                          <p>Top Quality Therapy</p>
+                        </div>
+                      </article>
+                    </li>
+                    <li class="glide__slide">
+                      <article>
+                        <a href="#" class="image filtered">
+                          <img src="images/2.jpg" alt="" />
+                        </a>
+                        <div class="content">
+                          <p>Accessible & Time-saving</p>
+                        </div>
+                      </article>
+                    </li>
+                    <li class="glide__slide">
+                      <article class="initial">
+                        <a href="#" class="image filtered">
+                          <img src="images/3.jpg" alt="" />
+                        </a>
+                        <div class="content">
+                          <p>Secure & Confidential</p>
+                        </div>
+                      </article>
+                    </li>
+                    <li class="glide__slide">
+                      <article>
+                        <a href="#" class="image filtered">
+                          <img src="images/4.jpg" alt="" />
+                        </a>
+                        <div class="content">
+                          <p>Anonymous & Private</p>
+                        </div>
+                      </article>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <footer id="footer">
+          <ul class="contact-icons special3">
+            <li>
+              <span class="icon major alt fa-envelope"></span>
+              <p>
+                <a href="#">information@gmail.com</a>
+              </p>
+            </li>
+            <li>
+              <span class="icon major alt fa-map"></span>
+              <p>
+                1234 Somewhere Road<br />
+                TN 00000
+              </p>
+            </li>
+            <li>
+              <span class="icon solid major alt fa-mobile-alt"></span>
+              <p>
+                <a href="#">(000) 000-0000</a>
+              </p>
+            </li>
+          </ul>
+          <div class="row cf">
+            <div class="six col">
+              <p class="copyright">&copy; MyHealth. All rights reserved.</p>
+            </div>
+            <div class="six col">
+              <ul class="icons">
+                <li>
+                  <a href="#" class="icon brands fa-twitter"
+                    ><span class="label2">Twitter</span></a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="icon brands fa-facebook"
+                    ><span class="label2">Facebook</span></a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="icon brands fa-instagram"
+                    ><span class="label2">Instagram</span></a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="icon brands fa-linkedin"
+                    ><span class="label2">LinkedIn</span></a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="icon brands fa-github"
+                    ><span class="label2">GitHub</span></a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </footer>
+      </div>
+    </div>
+    <script>
+      //preparing the slide show by Glide
+      var glide = new Glide(".glide", {
+        type: "carousel",
+        gap: 30,
+        perView: 3,
+        scrollLock: true,
+        arrows: {
+          prev: ".glider-prev",
+          next: ".glider-next"
+        },
+        breakpoints: {
+          1200: {
+            perView: 2
+          },
+          900: {
+            perView: 1
+          }
+        },
+        draggable: true,
+        autoplay: 3000,
+        circular: true
+      }).mount();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Booking</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/modal.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <script src="js/scripts.js"></script>
+  </head>
+  <body>
+    <div id="mini-modal" class="modal">
+      <div class="modal-window">
+        <h3 class="modal-title"></h3>
+        <p class="modal-message"></p>
+        <div align="center">
+          <button class="btn-close" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+    <div id="main" class="main">
+      <style type="text/css">
+        h1 {
+          font-weight: bold;
+          margin: 0;
+        }
+
+        h2 {
+          text-align: center;
+          color: white;
+        }
+      </style>
+      <div class="container login-container" id="container">
+        <div class="form-container sign-up-container">
+          <form action="#">
+            <h1>Create Account</h1>
+
+            <span>or use your email for registration</span>
+            <input
+              class="input-text"
+              type="email"
+              name="email"
+              placeholder="Email"
+            />
+            <span id="error_email" class="error-msg"></span>
+            <input
+              class="input-text"
+              name="password"
+              type="password"
+              placeholder="Password"
+            />
+            <span id="error_password" class="error-msg"></span>
+            <input
+              class="input-text"
+              name="password2"
+              type="password"
+              placeholder="Confirm Password"
+            />
+            <span id="error_password2" class="error-msg"></span>
+            <p>
+              <input
+                class="input-checkbox"
+                type="checkbox"
+                name="terms"
+                id="terms"
+              />&nbsp;&nbsp;I agree to the Terms and Conditions
+              <span id="error_terms" class="error-msg"></span>
+            </p>
+            <button onclick="signUp()" class="button-bordered">Sign Up</button>
+            <a class="mobile" id="signInMob" href="#">I have an account</a>
+          </form>
+        </div>
+        <div class="form-container sign-in-container">
+          <form action="#">
+            <h1>Sign in</h1>
+
+            <span>or use your account</span>
+            <input
+              class="input-text"
+              type="email"
+              name="email-account"
+              placeholder="Email"
+            />
+            <span id="error_email-account" class="error-msg"></span>
+            <input
+              class="input-text"
+              name="password-account"
+              type="password"
+              placeholder="Password"
+            />
+            <span id="error_password-account" class="error-msg"></span>
+            <a href="#">Forgot your password?</a>
+            <button onclick="signIn()" class="button-bordered">Sign In</button>
+            <a class="mobile" id="signUpMob" href="#">Create a new account</a>
+          </form>
+        </div>
+        <div class="overlay-container">
+          <div class="overlay">
+            <div class="overlay-panel overlay-left">
+              <h1>Welcome Back!</h1>
+              <p>
+                To keep connected with us please login with your personal info
+              </p>
+              <button class="ghost button-bordered" id="signIn">Sign In</button>
+            </div>
+            <div class="overlay-panel overlay-right">
+              <h1>Hello, Friend!</h1>
+              <p>Enter your personal details and start</p>
+              <button class="ghost button-bordered" id="signUp">Sign Up</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <script type="text/javascript">
+        initLoginPage();
+      </script>
+    </div>
+  </body>
+</html>

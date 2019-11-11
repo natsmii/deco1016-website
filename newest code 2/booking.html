@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Booking</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/styles.css?v=2309">
+<link rel="stylesheet" href="css/home.css?v=2309">
+<link rel="stylesheet" href="css/calender.css">
+<link rel="stylesheet" href="css/modal.css">
+<link rel="stylesheet" href="css/anim.css">
+<link rel="stylesheet" href="css/glide.core.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" type="text/css">
+<script src="js/glide.min.js"></script>
+<script src="js/scripts.js?v=2369"></script>
+<script src="js/calender.js"></script>
+<script src="js/mask.js"></script>
+</head>
+<body>
+	<div id="mini-modal" class="modal">
+		<div class="modal-window">
+			<h3 class="modal-title"></h3>
+			<p class="modal-message"></p>
+			<div align="center">
+				<button class="btn-close" data-dismiss="modal">Close</button>
+			</div>
+		</div>
+	</div>
+	<div id="main" class="main">
+		<style>
+body {
+	background-image: linear-gradient(to right, transparent, rgba(132, 68, 5, 0.3)),
+		url(images/bg2.jpg);
+	background-position: center;
+	background-size: cover;
+}
+</style>
+		<div class="container booking-container" id="container">
+			<div class="wrapper">
+				<div id="steps">
+					<div class="step active" data-desc="Session">1</div>
+					<div class="step " data-desc="Details">2</div>
+					<div class="step " data-desc="Payment Method">3</div>
+					<div class="step " data-desc="Confirm Payment">4</div>
+				</div>
+				<form class="form-wrapper">
+					<fieldset class="section is-active">
+						<h3>Counselling type</h3>
+						<p>We will match you to a counselor that can help with</p>
+						<div class="row cf">
+							<div class="four col">
+								<input type="radio" name="r1" id="r1" checked> <label for="r1" class="blue-color"> <i class="far fa-sad-tear"></i>
+									<h6>Depression</h6>
+								</label>
+							</div>
+							<div class="four col">
+								<input type="radio" name="r1" id="r2"><label for="r2" class="blue-color"> <i class="fas fa-heart-broken"></i>
+									<h6>Relationships</h6>
+								</label>
+							</div>
+							<div class="four col">
+								<input type="radio" name="r1" id="r3"><label for="r3" class="blue-color"> <i class="far fa-angry"></i>
+									<h6>Anger</h6>
+								</label>
+							</div>
+						</div>
+						<div class="row cf">
+							<div class="four col">
+								<input type="radio" name="r1" id="r4"> <label for="r4" class="blue-color"> <i class="far fa-tired"></i>
+									<h6>Stress</h6>
+								</label>
+							</div>
+							<div class="four col">
+								<input type="radio" name="r1" id="r5"><label for="r5" class="blue-color"> <i class="fas fa-pray"></i>
+									<h6>Grief</h6>
+								</label>
+							</div>
+							<div class="four col">
+								<input type="radio" name="r1" id="r6"><label for="r6" class="blue-color"> <i class="far fa-frown-open"></i>
+									<h6>Anxiety</h6>
+								</label>
+							</div>
+						</div>
+						<div class="row cf">
+							<div class="four col">
+								<input type="radio" name="r1" id="r7"> <label for="r7" class="blue-color"> <i class="far fa-sad-cry"></i>
+									<h6>Self-Esteem</h6>
+								</label>
+							</div>
+							<div class="four col">
+								<input type="radio" name="r1" id="r8"><label for="r8" class="blue-color"> <i class="fas fa-pills"></i>
+									<h6>addictions</h6>
+								</label>
+							</div>
+							<div class="four col">
+								<input type="radio" name="r1" id="r9"><label for="r9" class="blue-color"> <i class="fas fa-angle-double-right"></i>
+									<h6>Others</h6>
+								</label>
+							</div>
+						</div>
+						<button onclick="nextStep(1);" class="bg-green">Next</button>
+					</fieldset>
+					<fieldset class="section">
+						<div class="row cf">
+							<h3>Personal Details</h3>
+							<span class="sub-title">Our platform is private and secure. Your personal details will be kept safe</span> <br /> <br />
+						</div>
+						<div class="row cf">
+							<div class="two col desktop">
+								<div class="form-left"></div>
+							</div>
+
+							<div class="eight col">
+								<div class="row cf">
+									<div class="twelve col">
+										<label class="float-left lbl"> First Name </label> <input class="input-text2 empty" type="text" name="first_name" id="first_name" placeholder="First Name"> <span id="error_first_name" class='error-msg float-left minus-10-tm'></span>
+									</div>
+								</div>
+								<div class="row cf">
+									<div class="twelve col">
+										<label class="float-left lbl"> Last Name </label> <input class="input-text2 empty" type="text" name="last_name" id="last_name" placeholder="Last Name"> <span id="error_last_name" class='error-msg float-left minus-10-tm'></span>
+									</div>
+								</div>
+								<div class="row cf">
+									<div class="twelve col">
+										<label class="float-left lbl"> Age </label> <input class="input-text2 empty" type="text" name="age" id="age" placeholder="Age"> <span id="error_age" class='error-msg float-left minus-10-tm'></span>
+									</div>
+								</div>
+								<div class="row cf">
+									<div class="twelve col left-align">
+										<span class="lbl"> Gender </span>
+										<div class="row cf padding-top-20">
+											<div class="two col center-align">
+												<input type="radio" name="gender" id="male"> <label for="male" class="mini-lbl"> <i class="fas fa-mars-stroke i-lbl"></i>
+												</label> <span class="lbl-spn">Male</span>
+											</div>
+											<div class="two col center-align">
+												<input type="radio" name="gender" id="female"> <label for="female" class="mini-lbl"> <i class="fas fa-venus i-lbl"></i>
+												</label> <span class="lbl-spn">Female</span>
+											</div>
+										</div>
+										<span id="error_gender" class='error-msg float-left minus-10-tm'></span>
+									</div>
+
+								</div>
+								<div class="row cf">
+									<div class="twelve col">
+										<label class="float-left lbl"> Appointment Time </label> <input class="input-text2 empty" type="text" name="datepicker" id="datepicker" placeholder="Appointment Time"> <span id="error_datepicker" class='error-msg float-left minus-10-tm'></span>
+									</div>
+								</div>
+								<button onclick="backStep(0);" class="margin-right-30">Back</button>
+								<button onclick="nextStep(2);" class="bg-green">Next</button>
+							</div>
+
+							<div class="two col desktop">
+								<div class="form-left"></div>
+							</div>
+						</div>
+					</fieldset>
+					<fieldset class="section">
+						<h3>Select your payment method</h3>
+						<div>
+							<div class="row cf">
+								<div class="six col">
+									<input type="radio" name="r2" id="r10"><label for="r10" class="blue-color"><i class="fab fa-cc-paypal"></i>
+										<h6>PayPal</h6> </label>
+								</div>
+								<div class="six col">
+									<input type="radio" name="r2" id="r11" checked><label for="r11" class="blue-color"> <i class="far fa-credit-card"></i>
+										<h6>CreditCard</h6>
+									</label>
+								</div>
+							</div>
+						</div>
+
+						<button onclick="backStep(1);" class="margin-right-30">Back</button>
+						<button onclick="nextStep(3);" class="bg-green">Next</button>
+					</fieldset>
+					<fieldset class="section ">
+						<h3>Payment</h3>
+						<div class="row cf">
+							<div class="two col desktop">&nbsp;</div>
+							<div class="eight col">
+
+								<div class="row cf">
+									<div class="twelve col">
+										<label class="float-left lbl"> Credit Card Number </label> <input class="input-text2" type="text" name="cardnumber" id="cardnumber" placeholder="1234 1234 1234 1234"> <span id="error_cardnumber" class='error-msg float-left minus-10-tm'></span>
+									</div>
+								</div>
+
+								<div class="row cf">
+									<div class="twelve col">
+										<label class="float-left lbl"> Card Holder Name </label> <input class="input-text2" type="text" name="cardholder_name" id="cardholder_name" placeholder="Card Holder Name"> 
+										<span id="error_cardholder_name" class='error-msg float-left minus-10-tm'></span>
+									</div>
+								</div>
+								<div class="row cf">
+									<div class="five col">
+										<label class="float-left lbl"> Expiration </label> <input class="input-text2" type="text" name="expiredate" id="expiredate" placeholder="MM/YY">										
+										<span id="error_expiredate" class='error-msg float-left minus-10-tm'></span>
+									</div>
+									<div class="two col desktop">&nbsp;</div>
+									<div class="five col">
+										<label class="float-left lbl"> CVV </label>
+										<div class="cvc">
+											<div class="tooltip">
+												?
+												<div class="cvc-img">
+													<img src="images/cvv.png" alt="">
+												</div>
+											</div>
+										</div>
+										<input class="input-text2" type="text" name="cvv" id="cvv" placeholder="123">
+										<span id="error_cvv" class='error-msg float-left minus-10-tm'></span>
+									</div>
+								</div>
+							</div>
+							<div class="two col desktop">&nbsp;</div>
+						</div>
+
+						<button onclick="backStep(2);" class="margin-right-30">Back</button>
+						<button onclick="nextStep(0);" class="bg-green">Confirm</button>
+					</fieldset>
+					<fieldset class="section">
+						<div class="row cf"></div>
+						<div class="row cf">
+							<div class="one col desktop">&nbsp;</div>
+							<div class="ten col text-ce" align="center">
+								<img class="img-payment" src="images/payment.jpg">
+								<h3>Payment Successful</h3>
+								<span class="sub-title">Thanks <span class="sub-title" id="payment_name"></span>!<br/>You have successfully created an account !<br/>A receipt has been sent to your email<br/><br/></span>
+								<button onclick="goHome();" class="bg-green">Return</button>
+							</div>
+							<div class="one col desktop">&nbsp;</div>
+						</div>
+					</fieldset>
+				</form>
+			</div>
+			<script type="text/javascript">
+				currentSectionIndex = 0;
+				var picker = new Pikaday({
+					field : document.getElementById('datepicker'),
+					firstDay : 1,
+					minDate : new Date(),
+					maxDate : new Date(2020, 12, 31),
+					yearRange : [ 2000, 2020 ]
+				});
+				VMasker(document.querySelector("#cardnumber")).maskPattern("9999 9999 9999 9999");
+				VMasker(document.querySelector("#expiredate")).maskPattern("99/99");
+				VMasker(document.querySelector("#cvv")).maskPattern("999");
+				VMasker(document.querySelector("#age")).maskPattern("999");
+				VMasker(document.querySelector("#datepicker")).maskPattern("9999-99-99 99:99:99");
+				var options = {
+					offset : 20
+				};
+				var animation = new Animation(options);
+			</script>
+		</div>
+</body>
+</html>
