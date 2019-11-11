@@ -158,6 +158,24 @@ body {
 					</fieldset>
 					<fieldset class="section">
 						<h3>Select your payment method</h3>
+						<div class="row cf">
+							<div class="four col">
+								<input type="radio" name="session" id="s1" checked><label for="s1" class="blue-color">
+									<h6>1 session $40/H</h6>
+								</label>
+							</div>
+							<div class="four col">
+								<input type="radio" name="session" id="s2" ><label for="s2" class="blue-color">
+									<h6>5 session $150/H</h6>
+								</label>
+							</div>
+							<div class="four col">
+								<input type="radio" name="session" id="s3" ><label for="s3" class="blue-color">
+									<h6>10 session $300/H</h6>
+								</label>
+							</div>
+						</div>
+						<div class="row cf"></div>
 						<div>
 							<div class="row cf">
 								<div class="six col">
@@ -170,6 +188,7 @@ body {
 									</label>
 								</div>
 							</div>
+
 						</div>
 
 						<button onclick="backStep(1);" class="margin-right-30">Back</button>
@@ -189,14 +208,12 @@ body {
 
 								<div class="row cf">
 									<div class="twelve col">
-										<label class="float-left lbl"> Card Holder Name </label> <input class="input-text2" type="text" name="cardholder_name" id="cardholder_name" placeholder="Card Holder Name"> 
-										<span id="error_cardholder_name" class='error-msg float-left minus-10-tm'></span>
+										<label class="float-left lbl"> Card Holder Name </label> <input class="input-text2" type="text" name="cardholder_name" id="cardholder_name" placeholder="Card Holder Name"> <span id="error_cardholder_name" class='error-msg float-left minus-10-tm'></span>
 									</div>
 								</div>
 								<div class="row cf">
 									<div class="five col">
-										<label class="float-left lbl"> Expiration </label> <input class="input-text2" type="text" name="expiredate" id="expiredate" placeholder="MM/YY">										
-										<span id="error_expiredate" class='error-msg float-left minus-10-tm'></span>
+										<label class="float-left lbl"> Expiration </label> <input class="input-text2" type="text" name="expiredate" id="expiredate" placeholder="MM/YY"> <span id="error_expiredate" class='error-msg float-left minus-10-tm'></span>
 									</div>
 									<div class="two col desktop">&nbsp;</div>
 									<div class="five col">
@@ -209,8 +226,7 @@ body {
 												</div>
 											</div>
 										</div>
-										<input class="input-text2" type="text" name="cvv" id="cvv" placeholder="123">
-										<span id="error_cvv" class='error-msg float-left minus-10-tm'></span>
+										<input class="input-text2" type="text" name="cvv" id="cvv" placeholder="123"> <span id="error_cvv" class='error-msg float-left minus-10-tm'></span>
 									</div>
 								</div>
 							</div>
@@ -227,7 +243,8 @@ body {
 							<div class="ten col text-ce" align="center">
 								<img class="img-payment" src="images/payment.jpg">
 								<h3>Payment Successful</h3>
-								<span class="sub-title">Thanks <span class="sub-title" id="payment_name"></span>!<br/>You have successfully created an account !<br/>A receipt has been sent to your email<br/><br/></span>
+								<span class="sub-title">Thanks <span class="sub-title" id="payment_name"></span>!<br />You have successfully created an account !<br />A receipt has been sent to your email<br />
+								<br /></span>
 								<button onclick="goHome();" class="bg-green">Return</button>
 							</div>
 							<div class="one col desktop">&nbsp;</div>
